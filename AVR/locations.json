@@ -1,0 +1,10 @@
+{
+  "paths":{
+    "avrdude": "/usr/local/bin/avrdude",
+    "CheckForActiveUsbPorts":"ls /dev/tty.usb*",
+    "arduinoPath": "$ENV{HOME}/Arduino",
+    "AVRPath":"/usr/local/Cellar/avr-gcc@9/9.3.0_3/avr/include",
+    "AVRLibPath":"/usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/**"
+
+  }
+}

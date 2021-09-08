@@ -1,0 +1,1 @@
+/usr/local/bin/avr-g++ -std=gnu++14 -mmcu=atmega328p CMakeFiles/blink.dir/src/main.cpp.obj -o blink.elf 
