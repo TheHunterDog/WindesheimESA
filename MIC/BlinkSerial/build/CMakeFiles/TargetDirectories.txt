@@ -1,0 +1,9 @@
+/Users/markheijnekamp/Windesheim/MIC/BlinkSerial/build/CMakeFiles/edit_cache.dir
+/Users/markheijnekamp/Windesheim/MIC/BlinkSerial/build/CMakeFiles/hex.dir
+/Users/markheijnekamp/Windesheim/MIC/BlinkSerial/build/CMakeFiles/eeprom.dir
+/Users/markheijnekamp/Windesheim/MIC/BlinkSerial/build/CMakeFiles/disasm.dir
+/Users/markheijnekamp/Windesheim/MIC/BlinkSerial/build/CMakeFiles/rebuild_cache.dir
+/Users/markheijnekamp/Windesheim/MIC/BlinkSerial/build/CMakeFiles/upload_eeprom.dir
+/Users/markheijnekamp/Windesheim/MIC/BlinkSerial/build/CMakeFiles/upload.dir
+/Users/markheijnekamp/Windesheim/MIC/BlinkSerial/build/CMakeFiles/strip.dir
+/Users/markheijnekamp/Windesheim/MIC/BlinkSerial/build/CMakeFiles/blinkserial.dir

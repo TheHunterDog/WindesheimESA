@@ -1,0 +1,7 @@
+/Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/install/local.dir
+/Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/rebuild_cache.dir
+/Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/edit_cache.dir
+/Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/install/strip.dir
+/Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/install.dir
+/Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/list_install_components.dir
+/Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/arduinocore.dir
