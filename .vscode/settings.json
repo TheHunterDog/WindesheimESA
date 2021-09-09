@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.inc": "php",
+    "*.module": "php",
+    "*.info": "plaintext",
+    "*.install": "php",
+    "*.test": "php",
+    "numbers": "cpp"
+  }
+}
