@@ -1,16 +1,19 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
-#include <avr/interrupt.h>
 #include <HardwareSerial.h>
-
 
 int main()
 {
   Serial.begin(9600); // open serial connection
-  for (int i = 65; i <= 122; i++)
+  while (1)
   {
-    Serial.println((char) i);
+    for (int c = 'A'; c <= 'Z'; c++)
+    {
+      Serial.println((char)c);
+      Serial.flush();
+      _delay_ms(500); // wait a while
+    }
   }
   return 0;
 }
