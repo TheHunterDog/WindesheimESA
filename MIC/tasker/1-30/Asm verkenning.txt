@@ -1,0 +1,15 @@
+Zoek in de datasheet het I/O register adres van het DDRB en PORTB register
+- Let op: DDRB en PORTB hebben 2 adressen: een data space adres en een I/O adres!
+
+DDRB = 0x04
+
+PORTB = 0x05
+
+Met welk assembly statement wordt DDRB gevuld?
+
+sbi
+
+
+Met welk statements wordt PORTD getoggelt?
+
+out

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/markheijnekamp/Windesheim/AVR/blink/src/main.cpp" "CMakeFiles/blink.dir/src/main.cpp.obj" "gcc" "CMakeFiles/blink.dir/src/main.cpp.obj.d"
+  "/Users/markheijnekamp/Windesheim/MIC/blink/src/main.cpp" "CMakeFiles/blink.dir/src/main.cpp.obj" "gcc" "CMakeFiles/blink.dir/src/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

@@ -1,0 +1,88 @@
+Download de datasheet van de elo
+- Done
+
+Hoeveel machineinstructies kent de AVR ATMega328?
+-1 miljoen per seconde
+-totaal 131 instructies
+
+Welke features ondersteunt de ATMega328?
+High Performance, Low Power AVR® 8-Bit Microcontroller Family 
+Advanced RISC Architecture
+Capacitive touch buttons, sliders and wheels QTouch and QMatrixTM acquisition
+Up to 64 sense channels
+131 Powerful Instructions – Most Single Clock Cycle Execution 32 x 8 General Purpose Working Registers
+Fully Static Operation
+Up to 20 MIPS Throughput at 20MHz
+On-chip 2-cycle Multiplier
+High Endurance Non-volatile Memory Segments
+
+4/8/16/32KBytes of In-System Self-Programmable Flash program memory 256/512/512/1KBytes EEPROM
+512/1K/1K/2KBytes Internal SRAM
+Write/Erase Cycles: 10,000 Flash/100,000 EEPROM
+Data retention: 20 years at 85°C/100 years at 25°C(1) Optional Boot Code Section with Independent Lock Bits
+In-System Programming by On-chip Boot Program
+True Read-While-Write Operation Programming Lock for Software Security
+
+
+
+QTouch® library support
+Peripheral Features
+ Two 8-bit Timer/Counters with Separate Prescaler and Compare Mode
+ One 16-bit Timer/Counter with Separate Prescaler, Compare Mode, and Capture Mode
+   2018 Microchip Technology Inc. Data Sheet Complete DS40002061A-page 1
+  
+
+  
+
+Real Time Counter with Separate Oscillator
+Six PWM Channels
+8-channel 10-bit ADC in TQFP and QFN/MLF package
+Temperature Measurement 6-channel 10-bit ADC in PDIP Package
+Temperature Measurement
+Programmable Serial USART
+Master/Slave SPI Serial Interface
+Byte-oriented 2-wire Serial Interface (Philips I2C compatible) Programmable Watchdog Timer with Separate On-chip Oscillator On-chip Analog Comparator
+Interrupt and Wake-up on Pin Change Special Microcontroller Features
+ATmega48A/PA/88A/PA/168A/PA/328/P
+Power-on Reset and Programmable Brown-out Detection
+Internal Calibrated Oscillator
+External and Internal Interrupt Sources
+Six Sleep Modes: Idle, ADC Noise Reduction, Power-save, Power-down, Standby, and Extended Standby
+I/O and Packages
+ 23 Programmable I/O Lines
+ 28-pin PDIP, 32-lead TQFP, 28-pad QFN/MLF and 32-pad QFN/MLF
+Operating Voltage:  1.8 - 5.5V
+Temperature Range:  -40°C to 85°C
+Speed Grade:
+ 0-4MHz@1.8-5.5V,0-10MHz@2.7-5.5.V,0-20MHz@4.5-5.5V
+Power Consumption at 1MHz, 1.8V, 25°C  Active Mode: 0.2mA
+ Power-down Mode: 0.1μA
+• Power-save Mode: 0.75μA (Including 32kHz RTC)
+
+Binnen welke temperatuur range werkt de ATMega328?
+
+-40°C to 105°C
+
+
+Welke alternatieve functies heeft pin PB4?
+MISO (SPI Bus Master Input/Slave Output) PCINT4 (Pin Change Interrupt 4)
+
+Wat betekent bit 2 (N) in het Status register?
+Negative Flag
+
+Wat betekent bit 3 (EESAVE) in het high fuse byte?
+EEPROM Memory
+
+Op welk geheugenadres bevindt zich het PORTC register in het data geheugen?
+0x08
+Op welk geheugenadres bevindt zich de INT1 interrupt in het programmageheugen?
+0x0004 ligt er wel aan welke chip.
+Wat doet 'PUD' in figuur 18.2 general Digital I/O?
+-pullup disable
+
+- In welk register staat dit bit op welke plek?
+MCU Control Register
+0x35 bit 4
+
+het moet 14-2 zijn
+

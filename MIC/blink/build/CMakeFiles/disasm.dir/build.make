@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.21.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/markheijnekamp/Windesheim/AVR/blink
+CMAKE_SOURCE_DIR = /Users/markheijnekamp/Windesheim/MIC/blink
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/markheijnekamp/Windesheim/AVR/blink/build
+CMAKE_BINARY_DIR = /Users/markheijnekamp/Windesheim/MIC/blink/build
 
 # Utility rule file for disasm.
 
@@ -82,6 +82,6 @@ CMakeFiles/disasm.dir/clean:
 .PHONY : CMakeFiles/disasm.dir/clean
 
 CMakeFiles/disasm.dir/depend:
-	cd /Users/markheijnekamp/Windesheim/AVR/blink/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/markheijnekamp/Windesheim/AVR/blink /Users/markheijnekamp/Windesheim/AVR/blink /Users/markheijnekamp/Windesheim/AVR/blink/build /Users/markheijnekamp/Windesheim/AVR/blink/build /Users/markheijnekamp/Windesheim/AVR/blink/build/CMakeFiles/disasm.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/markheijnekamp/Windesheim/MIC/blink/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/markheijnekamp/Windesheim/MIC/blink /Users/markheijnekamp/Windesheim/MIC/blink /Users/markheijnekamp/Windesheim/MIC/blink/build /Users/markheijnekamp/Windesheim/MIC/blink/build /Users/markheijnekamp/Windesheim/MIC/blink/build/CMakeFiles/disasm.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/disasm.dir/depend
 

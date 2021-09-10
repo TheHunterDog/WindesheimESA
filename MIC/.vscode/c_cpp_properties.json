@@ -18,7 +18,7 @@
                 "${workspaceFolder}/**",
                 "/usr/local/Cellar/avr-gcc@9/9.3.0_3/avr/include",
                 "/usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/**",
-                "/Users/markheijnekamp/Windesheim/Arduino/**",
+                "/Users/markheijnekamp/Windesheim/MIC/**",
                 "/Users/markheijnekamp/Arduino/include/**"
             ],
             "defines": [

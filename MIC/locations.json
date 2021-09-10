@@ -1,10 +1,15 @@
 {
   "paths":{
     "avrdude": "/usr/local/bin/avrdude",
-    "CheckForActiveUsbPorts":"ls /dev/tty.usb*",
     "arduinoPath": "$ENV{HOME}/Arduino",
     "AVRPath":"/usr/local/Cellar/avr-gcc@9/9.3.0_3/avr/include",
-    "AVRLibPath":"/usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/**"
-
+    "AVRLibPath":"/usr/local/Cellar/avr-gcc@9/9.3.0_3/lib/avr-gcc/9/gcc/avr/**",
+  },
+  "Commands":{
+    "CheckForActiveUsbPorts":"ls /dev/tty.usb*",
+    "Update USB Serial": "echo "default_serial = \"{/dev/ttyACM0}\";" > $HOME/.avrduderc"",
+    "Build Cmake": "cmake -B build",
+    "BuildCmake" : "cmake --build build",
+    "Upload Arduino":"make -C upload"
   }
 }
