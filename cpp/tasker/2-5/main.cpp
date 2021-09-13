@@ -9,6 +9,7 @@ bool printFile(std::string fileName);
 void printFile(std::ifstream &inFile);
 void printFileAddNumbers(std::ifstream &inFile);
 void printFileReplaceSubstring(std::ifstream &inFile, std::string search, std::string replace);
+void printFileDigits(std::ifstream& inFile);
 
 int main()
 {
@@ -19,7 +20,6 @@ int main()
   return 0;
 }
 
-
 bool printFile(std::string fileName)
 {
   std::ifstream file;
@@ -28,12 +28,23 @@ bool printFile(std::string fileName)
   {
     // std::streambuf * buf = file.rdbuf();
     // std::cout<< (char) buf->sgetc();
-    printFileReplaceSubstring(file,"Lorem","Nee");
+    printFileDigits(file);
     file.close();
     return true;
   }
 
   return false;
+}
+
+void printFileDigits(std::ifstream& inFile){
+    while (!inFile.eof())
+  {
+    char cha;
+    inFile.get(cha);
+    if(cha >= '0' && cha <='9'){
+      std::cout << cha;
+    }
+  }
 }
 
 void printFile(std::ifstream &inFile)

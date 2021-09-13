@@ -9,6 +9,9 @@ bool printFile(std::string fileName);
 void printFile(std::ifstream &inFile);
 void printFileAddNumbers(std::ifstream &inFile);
 void printFileReplaceSubstring(std::ifstream &inFile, std::string search, std::string replace);
+void printFileDigits(std::ifstream &inFile);
+void printFileAddDigits(std::ifstream &inFile);
+void printFileNumbers(std::ifstream &inFile);
 
 int main()
 {
@@ -18,7 +21,53 @@ int main()
   }
   return 0;
 }
+void printFileNumbers(std::ifstream &inFile)
+{
+  int mem = 0;
+  while (!inFile.eof())
+  {
+    char cha;
+    inFile.get(cha);
+    if (cha >= '0' && cha <= '9')
+    {
+      if (mem > 0)
+      {
+        mem *= 10;
+      }
 
+      mem += (int)cha - 48;
+      if (mem < -1)
+      {
+        throw "Overflow error";
+      }
+    }
+    else if (mem > 0)
+    {
+      std::cout << mem << "\n";
+      mem = 0;
+    }
+  }
+  if (mem > 0)
+  {
+    std::cout << mem << "\n";
+    mem = 0;
+  }
+}
+
+void printFileAddDigits(std::ifstream &inFile)
+{
+  int total = 0;
+  while (!inFile.eof())
+  {
+    char cha;
+    inFile.get(cha);
+    if (cha >= '0' && cha <= '9')
+    {
+      total += ((int)cha - 48);
+    }
+  }
+  std::cout << total;
+}
 
 bool printFile(std::string fileName)
 {
@@ -28,12 +77,25 @@ bool printFile(std::string fileName)
   {
     // std::streambuf * buf = file.rdbuf();
     // std::cout<< (char) buf->sgetc();
-    printFileReplaceSubstring(file,"Lorem","Nee");
+    printFileNumbers(file);
     file.close();
     return true;
   }
 
   return false;
+}
+
+void printFileDigits(std::ifstream &inFile)
+{
+  while (!inFile.eof())
+  {
+    char cha;
+    inFile.get(cha);
+    if (cha >= '0' && cha <= '9')
+    {
+      std::cout << cha;
+    }
+  }
 }
 
 void printFile(std::ifstream &inFile)
