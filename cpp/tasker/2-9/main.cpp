@@ -31,7 +31,7 @@ void printFileAddDigits9(std::ifstream &inFile)
   float total = 0;
   char cha;
   float mem = 0;
-  while (!inFile.eof() && inFile.get(cha))
+  while (!inFile.eof() && inFile.get(cha) || mem != 0)
   {
 
     if (cha >= '0' && cha <= '9')
@@ -62,14 +62,8 @@ void printFileAddDigits9(std::ifstream &inFile)
       total += mem;
       mem = 0;
     }
+    cha = ' ';
   }
-  if (negative)
-  {
-    mem = -mem;
-    negative = false;
-  }
-  total += mem;
-  mem = 0;
   std::cout << total;
 }
 

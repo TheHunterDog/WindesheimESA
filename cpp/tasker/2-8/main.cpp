@@ -29,7 +29,7 @@ void printFileAddDigits8(std::ifstream &inFile)
   int total = 0;
   char cha;
   int mem = 0;
-  while (!inFile.eof() && inFile.get(cha))
+  while (!inFile.eof() && inFile.get(cha) || mem != 0)
   {
     
     if (cha >= '0' && cha <= '9')
@@ -40,6 +40,7 @@ void printFileAddDigits8(std::ifstream &inFile)
         mem *= 10;
       }
       mem += (int)cha - 48;
+      cha = ' ';
       if (mem < -1)
       {
         throw "Overflow error";
@@ -51,8 +52,6 @@ void printFileAddDigits8(std::ifstream &inFile)
     }
 
   }
-  total += mem;
-      mem = 0;
       std::cout << total;
 
 }

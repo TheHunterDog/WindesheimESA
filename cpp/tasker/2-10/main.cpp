@@ -4,8 +4,6 @@
 #include <sstream>
 
 const int BUFFERSIZE = 16;
-const int DECIMAL = 10;
-
 
 bool printFile(std::string fileName);
 void printFile(std::ifstream &inFile);
@@ -18,6 +16,8 @@ void printFileAddDigits8(std::ifstream &inFile);
 int getNextNumber(std::ifstream &inFile);
 void printFileAddDigits9(std::ifstream &inFile);
 void printFileAddDigits10(std::ifstream &inFile);
+
+float convertDecimal(int num,int decimalplace);
 int main()
 {
   if (!printFile("test.txt"))
@@ -34,8 +34,8 @@ void printFileAddDigits10(std::ifstream &inFile)
   char cha;
   float mem = 0;
   bool IsDecimal;
-  float decimal;
-  while (!inFile.eof() && inFile.get(cha))
+  int decimal;
+  while (!inFile.eof() && inFile.get(cha) || mem != 0)
   {
 
     if (cha >= '0' && cha <= '9')
@@ -67,35 +67,34 @@ void printFileAddDigits10(std::ifstream &inFile)
     }
     else if (mem > 0)
     {
+      if (IsDecimal)
+      {
+        
+        mem += convertDecimal(decimal,1);;
+      }
       if (negative)
       {
         mem = -mem;
         negative = false;
       }
-      if (IsDecimal)
-      {
-        decimal /= DECIMAL;
-        mem += decimal;
-      }
+
       IsDecimal = false;
       total += mem;
       mem = 0;
     }
-  }
-    if (IsDecimal)
-  {
-    decimal /= DECIMAL;
-    mem += decimal;
-  }
-  if (negative)
-  {
-    mem = -mem;
-    negative = false;
+    cha = ' ';
   }
 
-  total += mem;
-  mem = 0;
   std::cout << total;
+}
+
+float convertDecimal(int num,int decimalplace){
+  float numb = num;
+  for (int i = 0; i < decimalplace; i++)
+  {
+    numb/= 10;
+  }
+  return numb;
 }
 
 void printFileAddDigits9(std::ifstream &inFile)
