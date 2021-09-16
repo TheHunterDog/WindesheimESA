@@ -29,7 +29,9 @@ int main()
     Serial.print(!(PINB & (1<<PINB1)));
     Serial.print(PINB & (1<<PINB1));
     Serial.print(PINB & (1<<PINB1) == (1<<PINB1));
-    if ((!(~(PORTB | ~((1 << PORTB1))))))
+    Serial.print(!(PINB & (1<<PORTB1)));
+    Serial.print(PINB & (1<<PINB1));
+    if (PINB & (1<<PINB1))
     {
       PORTC ^= (1 << PORTC5);
       Serial.println("BUTTON PRESSED");
