@@ -22,25 +22,18 @@ int main()
   {
     		_delay_ms(500);
 
-    Serial.print(PORTB  & (1<<PORTB1));
-    Serial.print((!(~(PORTB | ~((1 << PORTB1))))));
-
-    Serial.print(PINB & (1<<PINB1) == 0);
-    Serial.print(!(PINB & (1<<PINB1)));
-    Serial.print(PINB & (1<<PINB1));
-    Serial.print(PINB & (1<<PINB1) == (1<<PINB1));
-    Serial.print(!(PINB & (1<<PORTB1)));
-    Serial.print(PINB & (1<<PINB1));
     if (PINB & (1<<PINB1))
     {
-      PORTC ^= (1 << PORTC5);
-      Serial.println("BUTTON PRESSED");
+      PORTC &= ~(1 << PORTC5);
+
+      Serial.println("BUTTON DEPRESSED");
     }
     else
     {
-      PORTC &= ~(1 << PORTC5);
-      Serial.println("BUTTON DEPRESSED");
+      PORTC |= (1 << PORTC5);
 
+      Serial.println("BUTTON PRESSED");
+      
     }
   }
 }
