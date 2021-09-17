@@ -1,0 +1,9 @@
+/Users/markheijnekamp/Windesheim/MIC/tasker/2-17/build/CMakeFiles/edit_cache.dir
+/Users/markheijnekamp/Windesheim/MIC/tasker/2-17/build/CMakeFiles/hex.dir
+/Users/markheijnekamp/Windesheim/MIC/tasker/2-17/build/CMakeFiles/eeprom.dir
+/Users/markheijnekamp/Windesheim/MIC/tasker/2-17/build/CMakeFiles/disasm.dir
+/Users/markheijnekamp/Windesheim/MIC/tasker/2-17/build/CMakeFiles/rebuild_cache.dir
+/Users/markheijnekamp/Windesheim/MIC/tasker/2-17/build/CMakeFiles/upload_eeprom.dir
+/Users/markheijnekamp/Windesheim/MIC/tasker/2-17/build/CMakeFiles/upload.dir
+/Users/markheijnekamp/Windesheim/MIC/tasker/2-17/build/CMakeFiles/strip.dir
+/Users/markheijnekamp/Windesheim/MIC/tasker/2-17/build/CMakeFiles/blinkserial.dir

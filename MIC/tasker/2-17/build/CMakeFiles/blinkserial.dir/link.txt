@@ -1,0 +1,1 @@
+/usr/local/bin/avr-g++ -std=gnu++14 -mmcu=atmega328p CMakeFiles/blinkserial.dir/src/main.cpp.obj -o blinkserial.elf   -L/Users/markheijnekamp/Arduino/lib  -larduinocore 
