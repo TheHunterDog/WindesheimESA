@@ -226,7 +226,6 @@ void printFileAddDigits(std::ifstream &inFile)
   std::cout << total;
 }
 
-bool printFile(std::string fileName)
 {
   std::ifstream file;
   file.open(fileName);
