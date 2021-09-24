@@ -32,6 +32,7 @@ target_link_directories(${PRODUCT_NAME}
 )
 target_link_libraries(${PRODUCT_NAME}
     arduinocore
+    usart
 )
 
 # Rename the output to .elf as we will create multiple files
