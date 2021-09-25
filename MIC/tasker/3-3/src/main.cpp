@@ -18,6 +18,7 @@ bool TestconvertDecimalTOoctal();
 bool TestreverseNumber();
 int reverseNumber(int);
 void transmitInt(uint8_t);
+int revNum(int n);
 
 int main()
 {
@@ -95,7 +96,7 @@ bool TestconvertDecimalTOoctal(){
 
 void transmitInt(uint8_t number){
 
-  number = reverseNumber(number);
+  number = revNum(number);
   USART_Transmit('-');
   while(number > 0){
     USART_Transmit(number % 10 + '0');
@@ -109,21 +110,31 @@ int reverseNumber(int number){
   int newNum = 0;
   int remain = 0;
   int l = 1;
-  uint8_t old = 1;
 
-  while (number > 0)
+  while (number != 0)
   {
     remain = number % 10;
-    USART_Transmit(old+'0');
+    USART_Transmit(l+'0');
     USART_Transmit('/');
-    newNum += (old * remain);
+    newNum += (l * remain);
     number /= 10;
-    old *= 10;
+    l = l * 10;
     
   }
   return newNum;
 }
 
+int revNum(int n){
+  int reverse=0, rem;    
+  while(n!=0)    
+  {    
+    rem=n%10;      
+     reverse=reverse*10+rem;    
+     n/=10; 
+  }
+  return reverse;
+}
+
 bool TestreverseNumber(){
-  return reverseNumber(251) == 152;
+  return revNum(251) == 152;
 }
