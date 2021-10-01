@@ -4,6 +4,15 @@
 			"path": "MIC"
 		}
   ],
-  "settings": {}
+  "settings": {
+    "files.associations": {
+      "*.inc": "php",
+      "*.module": "php",
+      "*.info": "plaintext",
+      "*.install": "php",
+      "*.test": "php",
+      "arduino.h": "c"
+    }
+  }
 }
 

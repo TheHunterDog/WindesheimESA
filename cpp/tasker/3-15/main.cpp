@@ -28,40 +28,42 @@ uint8_t getbits(uint32_t board, int index)
 bool isAlive(uint8_t bitSection, uint8_t ruleset)
 {
   bitSection = bitSection >> 5;
+
+  return ruleset & (1<<bitSection);
   // std::cout << std::bitset<8>(bitSection) << "\n";
-  if (bitSection & ((1 << 0)) && bitSection & ((1 << 1)) && bitSection & ((1 << 2)))
-  {
-    return ruleset & (1 << 7);
-  }
+  // if (bitSection & ((1 << 0)) && bitSection & ((1 << 1)) && bitSection & ((1 << 2)))
+  // {
+  //   return ruleset & (1 << 7);
+  // }
 
-  if (bitSection & ((1 << 0)))
-  {
-    if (bitSection & ((1 << 1)))
-    {
-      return ruleset & (1 << 3);
-    }
+  // if (bitSection & ((1 << 0)))
+  // {
+  //   if (bitSection & ((1 << 1)))
+  //   {
+  //     return ruleset & (1 << 3);
+  //   }
 
-    if (bitSection & ((1 << 2)))
-    {
-      return ruleset & (1 << 5);
-    }
+  //   if (bitSection & ((1 << 2)))
+  //   {
+  //     return ruleset & (1 << 5);
+  //   }
 
-    return ruleset & (1 << 1);
-  }
+  //   return ruleset & (1 << 1);
+  // }
 
-  if (bitSection & ((1 << 1)))
-  {
-    if (bitSection & ((1 << 2)))
-    {
-      return ruleset & (1 << 6);
-    }
-    return ruleset & (1 << 2);
-  }
-  if (bitSection & (1 << 2))
-  {
-    return ruleset & (1 << 4);
-  }
-  return ruleset & (1 << 0);
+  // if (bitSection & ((1 << 1)))
+  // {
+  //   if (bitSection & ((1 << 2)))
+  //   {
+  //     return ruleset & (1 << 6);
+  //   }
+  //   return ruleset & (1 << 2);
+  // }
+  // if (bitSection & (1 << 2))
+  // {
+  //   return ruleset & (1 << 4);
+  // }
+  // return ruleset & (1 << 0);
 }
 void print_generation(uint32_t generation)
 {

@@ -46,7 +46,7 @@ int main()
     
 
 
-
+    // TODO: Test leds
      PORTD = (counter << 2) | (PORTD & ((1 << DDD1) | (1 << DDD0)));
 
 
