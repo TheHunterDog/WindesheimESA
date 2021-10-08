@@ -1,4 +1,4 @@
-/Users/markheijnekamp/Arduino/lib/libarduinocore.a
+/Users/markheijnekamp/Arduino/lib/libArduinoCore.a
 /Users/markheijnekamp/Arduino/include/arduino/pins_arduino.h
 /Users/markheijnekamp/Arduino/include/arduino/Arduino.h
 /Users/markheijnekamp/Arduino/include/arduino/binary.h

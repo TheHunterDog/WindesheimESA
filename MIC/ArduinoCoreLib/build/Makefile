@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.21.2/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.21.3/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.21.2/bin/cmake -E rm -f
+RM = /usr/local/Cellar/cmake/3.21.3/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,19 +68,19 @@ CMAKE_BINARY_DIR = /Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.21.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.21.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.21.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.21.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.21.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/Cellar/cmake/3.21.3/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -100,25 +100,25 @@ edit_cache/fast: edit_cache
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.21.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.21.3/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.21.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.21.3/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.21.2/bin/cmake -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.21.3/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.21.2/bin/cmake -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.21.3/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -162,24 +162,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named arduinocore
+# Target rules for targets named ArduinoCore
 
 # Build rule for target.
-arduinocore: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 arduinocore
-.PHONY : arduinocore
+ArduinoCore: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ArduinoCore
+.PHONY : ArduinoCore
 
 # fast build rule for target.
-arduinocore/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/build
-.PHONY : arduinocore/fast
+ArduinoCore/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/build
+.PHONY : ArduinoCore/fast
 
 src/cores/arduino/CDC.obj: src/cores/arduino/CDC.cpp.obj
 .PHONY : src/cores/arduino/CDC.obj
 
 # target to build an object file
 src/cores/arduino/CDC.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/CDC.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/CDC.cpp.obj
 .PHONY : src/cores/arduino/CDC.cpp.obj
 
 src/cores/arduino/CDC.i: src/cores/arduino/CDC.cpp.i
@@ -187,7 +187,7 @@ src/cores/arduino/CDC.i: src/cores/arduino/CDC.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/CDC.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/CDC.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/CDC.cpp.i
 .PHONY : src/cores/arduino/CDC.cpp.i
 
 src/cores/arduino/CDC.s: src/cores/arduino/CDC.cpp.s
@@ -195,7 +195,7 @@ src/cores/arduino/CDC.s: src/cores/arduino/CDC.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/CDC.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/CDC.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/CDC.cpp.s
 .PHONY : src/cores/arduino/CDC.cpp.s
 
 src/cores/arduino/HardwareSerial.obj: src/cores/arduino/HardwareSerial.cpp.obj
@@ -203,7 +203,7 @@ src/cores/arduino/HardwareSerial.obj: src/cores/arduino/HardwareSerial.cpp.obj
 
 # target to build an object file
 src/cores/arduino/HardwareSerial.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial.cpp.obj
 .PHONY : src/cores/arduino/HardwareSerial.cpp.obj
 
 src/cores/arduino/HardwareSerial.i: src/cores/arduino/HardwareSerial.cpp.i
@@ -211,7 +211,7 @@ src/cores/arduino/HardwareSerial.i: src/cores/arduino/HardwareSerial.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/HardwareSerial.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial.cpp.i
 .PHONY : src/cores/arduino/HardwareSerial.cpp.i
 
 src/cores/arduino/HardwareSerial.s: src/cores/arduino/HardwareSerial.cpp.s
@@ -219,7 +219,7 @@ src/cores/arduino/HardwareSerial.s: src/cores/arduino/HardwareSerial.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/HardwareSerial.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial.cpp.s
 .PHONY : src/cores/arduino/HardwareSerial.cpp.s
 
 src/cores/arduino/HardwareSerial0.obj: src/cores/arduino/HardwareSerial0.cpp.obj
@@ -227,7 +227,7 @@ src/cores/arduino/HardwareSerial0.obj: src/cores/arduino/HardwareSerial0.cpp.obj
 
 # target to build an object file
 src/cores/arduino/HardwareSerial0.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial0.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial0.cpp.obj
 .PHONY : src/cores/arduino/HardwareSerial0.cpp.obj
 
 src/cores/arduino/HardwareSerial0.i: src/cores/arduino/HardwareSerial0.cpp.i
@@ -235,7 +235,7 @@ src/cores/arduino/HardwareSerial0.i: src/cores/arduino/HardwareSerial0.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/HardwareSerial0.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial0.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial0.cpp.i
 .PHONY : src/cores/arduino/HardwareSerial0.cpp.i
 
 src/cores/arduino/HardwareSerial0.s: src/cores/arduino/HardwareSerial0.cpp.s
@@ -243,7 +243,7 @@ src/cores/arduino/HardwareSerial0.s: src/cores/arduino/HardwareSerial0.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/HardwareSerial0.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial0.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial0.cpp.s
 .PHONY : src/cores/arduino/HardwareSerial0.cpp.s
 
 src/cores/arduino/HardwareSerial1.obj: src/cores/arduino/HardwareSerial1.cpp.obj
@@ -251,7 +251,7 @@ src/cores/arduino/HardwareSerial1.obj: src/cores/arduino/HardwareSerial1.cpp.obj
 
 # target to build an object file
 src/cores/arduino/HardwareSerial1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial1.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial1.cpp.obj
 .PHONY : src/cores/arduino/HardwareSerial1.cpp.obj
 
 src/cores/arduino/HardwareSerial1.i: src/cores/arduino/HardwareSerial1.cpp.i
@@ -259,7 +259,7 @@ src/cores/arduino/HardwareSerial1.i: src/cores/arduino/HardwareSerial1.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/HardwareSerial1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial1.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial1.cpp.i
 .PHONY : src/cores/arduino/HardwareSerial1.cpp.i
 
 src/cores/arduino/HardwareSerial1.s: src/cores/arduino/HardwareSerial1.cpp.s
@@ -267,7 +267,7 @@ src/cores/arduino/HardwareSerial1.s: src/cores/arduino/HardwareSerial1.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/HardwareSerial1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial1.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial1.cpp.s
 .PHONY : src/cores/arduino/HardwareSerial1.cpp.s
 
 src/cores/arduino/HardwareSerial2.obj: src/cores/arduino/HardwareSerial2.cpp.obj
@@ -275,7 +275,7 @@ src/cores/arduino/HardwareSerial2.obj: src/cores/arduino/HardwareSerial2.cpp.obj
 
 # target to build an object file
 src/cores/arduino/HardwareSerial2.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial2.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial2.cpp.obj
 .PHONY : src/cores/arduino/HardwareSerial2.cpp.obj
 
 src/cores/arduino/HardwareSerial2.i: src/cores/arduino/HardwareSerial2.cpp.i
@@ -283,7 +283,7 @@ src/cores/arduino/HardwareSerial2.i: src/cores/arduino/HardwareSerial2.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/HardwareSerial2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial2.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial2.cpp.i
 .PHONY : src/cores/arduino/HardwareSerial2.cpp.i
 
 src/cores/arduino/HardwareSerial2.s: src/cores/arduino/HardwareSerial2.cpp.s
@@ -291,7 +291,7 @@ src/cores/arduino/HardwareSerial2.s: src/cores/arduino/HardwareSerial2.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/HardwareSerial2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial2.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial2.cpp.s
 .PHONY : src/cores/arduino/HardwareSerial2.cpp.s
 
 src/cores/arduino/HardwareSerial3.obj: src/cores/arduino/HardwareSerial3.cpp.obj
@@ -299,7 +299,7 @@ src/cores/arduino/HardwareSerial3.obj: src/cores/arduino/HardwareSerial3.cpp.obj
 
 # target to build an object file
 src/cores/arduino/HardwareSerial3.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial3.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial3.cpp.obj
 .PHONY : src/cores/arduino/HardwareSerial3.cpp.obj
 
 src/cores/arduino/HardwareSerial3.i: src/cores/arduino/HardwareSerial3.cpp.i
@@ -307,7 +307,7 @@ src/cores/arduino/HardwareSerial3.i: src/cores/arduino/HardwareSerial3.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/HardwareSerial3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial3.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial3.cpp.i
 .PHONY : src/cores/arduino/HardwareSerial3.cpp.i
 
 src/cores/arduino/HardwareSerial3.s: src/cores/arduino/HardwareSerial3.cpp.s
@@ -315,7 +315,7 @@ src/cores/arduino/HardwareSerial3.s: src/cores/arduino/HardwareSerial3.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/HardwareSerial3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/HardwareSerial3.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/HardwareSerial3.cpp.s
 .PHONY : src/cores/arduino/HardwareSerial3.cpp.s
 
 src/cores/arduino/IPAddress.obj: src/cores/arduino/IPAddress.cpp.obj
@@ -323,7 +323,7 @@ src/cores/arduino/IPAddress.obj: src/cores/arduino/IPAddress.cpp.obj
 
 # target to build an object file
 src/cores/arduino/IPAddress.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/IPAddress.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/IPAddress.cpp.obj
 .PHONY : src/cores/arduino/IPAddress.cpp.obj
 
 src/cores/arduino/IPAddress.i: src/cores/arduino/IPAddress.cpp.i
@@ -331,7 +331,7 @@ src/cores/arduino/IPAddress.i: src/cores/arduino/IPAddress.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/IPAddress.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/IPAddress.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/IPAddress.cpp.i
 .PHONY : src/cores/arduino/IPAddress.cpp.i
 
 src/cores/arduino/IPAddress.s: src/cores/arduino/IPAddress.cpp.s
@@ -339,7 +339,7 @@ src/cores/arduino/IPAddress.s: src/cores/arduino/IPAddress.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/IPAddress.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/IPAddress.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/IPAddress.cpp.s
 .PHONY : src/cores/arduino/IPAddress.cpp.s
 
 src/cores/arduino/PluggableUSB.obj: src/cores/arduino/PluggableUSB.cpp.obj
@@ -347,7 +347,7 @@ src/cores/arduino/PluggableUSB.obj: src/cores/arduino/PluggableUSB.cpp.obj
 
 # target to build an object file
 src/cores/arduino/PluggableUSB.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/PluggableUSB.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/PluggableUSB.cpp.obj
 .PHONY : src/cores/arduino/PluggableUSB.cpp.obj
 
 src/cores/arduino/PluggableUSB.i: src/cores/arduino/PluggableUSB.cpp.i
@@ -355,7 +355,7 @@ src/cores/arduino/PluggableUSB.i: src/cores/arduino/PluggableUSB.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/PluggableUSB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/PluggableUSB.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/PluggableUSB.cpp.i
 .PHONY : src/cores/arduino/PluggableUSB.cpp.i
 
 src/cores/arduino/PluggableUSB.s: src/cores/arduino/PluggableUSB.cpp.s
@@ -363,7 +363,7 @@ src/cores/arduino/PluggableUSB.s: src/cores/arduino/PluggableUSB.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/PluggableUSB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/PluggableUSB.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/PluggableUSB.cpp.s
 .PHONY : src/cores/arduino/PluggableUSB.cpp.s
 
 src/cores/arduino/Print.obj: src/cores/arduino/Print.cpp.obj
@@ -371,7 +371,7 @@ src/cores/arduino/Print.obj: src/cores/arduino/Print.cpp.obj
 
 # target to build an object file
 src/cores/arduino/Print.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/Print.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/Print.cpp.obj
 .PHONY : src/cores/arduino/Print.cpp.obj
 
 src/cores/arduino/Print.i: src/cores/arduino/Print.cpp.i
@@ -379,7 +379,7 @@ src/cores/arduino/Print.i: src/cores/arduino/Print.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/Print.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/Print.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/Print.cpp.i
 .PHONY : src/cores/arduino/Print.cpp.i
 
 src/cores/arduino/Print.s: src/cores/arduino/Print.cpp.s
@@ -387,7 +387,7 @@ src/cores/arduino/Print.s: src/cores/arduino/Print.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/Print.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/Print.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/Print.cpp.s
 .PHONY : src/cores/arduino/Print.cpp.s
 
 src/cores/arduino/Stream.obj: src/cores/arduino/Stream.cpp.obj
@@ -395,7 +395,7 @@ src/cores/arduino/Stream.obj: src/cores/arduino/Stream.cpp.obj
 
 # target to build an object file
 src/cores/arduino/Stream.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/Stream.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/Stream.cpp.obj
 .PHONY : src/cores/arduino/Stream.cpp.obj
 
 src/cores/arduino/Stream.i: src/cores/arduino/Stream.cpp.i
@@ -403,7 +403,7 @@ src/cores/arduino/Stream.i: src/cores/arduino/Stream.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/Stream.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/Stream.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/Stream.cpp.i
 .PHONY : src/cores/arduino/Stream.cpp.i
 
 src/cores/arduino/Stream.s: src/cores/arduino/Stream.cpp.s
@@ -411,7 +411,7 @@ src/cores/arduino/Stream.s: src/cores/arduino/Stream.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/Stream.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/Stream.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/Stream.cpp.s
 .PHONY : src/cores/arduino/Stream.cpp.s
 
 src/cores/arduino/Tone.obj: src/cores/arduino/Tone.cpp.obj
@@ -419,7 +419,7 @@ src/cores/arduino/Tone.obj: src/cores/arduino/Tone.cpp.obj
 
 # target to build an object file
 src/cores/arduino/Tone.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/Tone.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/Tone.cpp.obj
 .PHONY : src/cores/arduino/Tone.cpp.obj
 
 src/cores/arduino/Tone.i: src/cores/arduino/Tone.cpp.i
@@ -427,7 +427,7 @@ src/cores/arduino/Tone.i: src/cores/arduino/Tone.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/Tone.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/Tone.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/Tone.cpp.i
 .PHONY : src/cores/arduino/Tone.cpp.i
 
 src/cores/arduino/Tone.s: src/cores/arduino/Tone.cpp.s
@@ -435,7 +435,7 @@ src/cores/arduino/Tone.s: src/cores/arduino/Tone.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/Tone.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/Tone.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/Tone.cpp.s
 .PHONY : src/cores/arduino/Tone.cpp.s
 
 src/cores/arduino/USBCore.obj: src/cores/arduino/USBCore.cpp.obj
@@ -443,7 +443,7 @@ src/cores/arduino/USBCore.obj: src/cores/arduino/USBCore.cpp.obj
 
 # target to build an object file
 src/cores/arduino/USBCore.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/USBCore.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/USBCore.cpp.obj
 .PHONY : src/cores/arduino/USBCore.cpp.obj
 
 src/cores/arduino/USBCore.i: src/cores/arduino/USBCore.cpp.i
@@ -451,7 +451,7 @@ src/cores/arduino/USBCore.i: src/cores/arduino/USBCore.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/USBCore.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/USBCore.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/USBCore.cpp.i
 .PHONY : src/cores/arduino/USBCore.cpp.i
 
 src/cores/arduino/USBCore.s: src/cores/arduino/USBCore.cpp.s
@@ -459,7 +459,7 @@ src/cores/arduino/USBCore.s: src/cores/arduino/USBCore.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/USBCore.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/USBCore.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/USBCore.cpp.s
 .PHONY : src/cores/arduino/USBCore.cpp.s
 
 src/cores/arduino/WInterrupts.obj: src/cores/arduino/WInterrupts.c.obj
@@ -467,7 +467,7 @@ src/cores/arduino/WInterrupts.obj: src/cores/arduino/WInterrupts.c.obj
 
 # target to build an object file
 src/cores/arduino/WInterrupts.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/WInterrupts.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/WInterrupts.c.obj
 .PHONY : src/cores/arduino/WInterrupts.c.obj
 
 src/cores/arduino/WInterrupts.i: src/cores/arduino/WInterrupts.c.i
@@ -475,7 +475,7 @@ src/cores/arduino/WInterrupts.i: src/cores/arduino/WInterrupts.c.i
 
 # target to preprocess a source file
 src/cores/arduino/WInterrupts.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/WInterrupts.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/WInterrupts.c.i
 .PHONY : src/cores/arduino/WInterrupts.c.i
 
 src/cores/arduino/WInterrupts.s: src/cores/arduino/WInterrupts.c.s
@@ -483,7 +483,7 @@ src/cores/arduino/WInterrupts.s: src/cores/arduino/WInterrupts.c.s
 
 # target to generate assembly for a file
 src/cores/arduino/WInterrupts.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/WInterrupts.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/WInterrupts.c.s
 .PHONY : src/cores/arduino/WInterrupts.c.s
 
 src/cores/arduino/WMath.obj: src/cores/arduino/WMath.cpp.obj
@@ -491,7 +491,7 @@ src/cores/arduino/WMath.obj: src/cores/arduino/WMath.cpp.obj
 
 # target to build an object file
 src/cores/arduino/WMath.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/WMath.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/WMath.cpp.obj
 .PHONY : src/cores/arduino/WMath.cpp.obj
 
 src/cores/arduino/WMath.i: src/cores/arduino/WMath.cpp.i
@@ -499,7 +499,7 @@ src/cores/arduino/WMath.i: src/cores/arduino/WMath.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/WMath.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/WMath.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/WMath.cpp.i
 .PHONY : src/cores/arduino/WMath.cpp.i
 
 src/cores/arduino/WMath.s: src/cores/arduino/WMath.cpp.s
@@ -507,7 +507,7 @@ src/cores/arduino/WMath.s: src/cores/arduino/WMath.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/WMath.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/WMath.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/WMath.cpp.s
 .PHONY : src/cores/arduino/WMath.cpp.s
 
 src/cores/arduino/WString.obj: src/cores/arduino/WString.cpp.obj
@@ -515,7 +515,7 @@ src/cores/arduino/WString.obj: src/cores/arduino/WString.cpp.obj
 
 # target to build an object file
 src/cores/arduino/WString.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/WString.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/WString.cpp.obj
 .PHONY : src/cores/arduino/WString.cpp.obj
 
 src/cores/arduino/WString.i: src/cores/arduino/WString.cpp.i
@@ -523,7 +523,7 @@ src/cores/arduino/WString.i: src/cores/arduino/WString.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/WString.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/WString.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/WString.cpp.i
 .PHONY : src/cores/arduino/WString.cpp.i
 
 src/cores/arduino/WString.s: src/cores/arduino/WString.cpp.s
@@ -531,7 +531,7 @@ src/cores/arduino/WString.s: src/cores/arduino/WString.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/WString.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/WString.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/WString.cpp.s
 .PHONY : src/cores/arduino/WString.cpp.s
 
 src/cores/arduino/abi.obj: src/cores/arduino/abi.cpp.obj
@@ -539,7 +539,7 @@ src/cores/arduino/abi.obj: src/cores/arduino/abi.cpp.obj
 
 # target to build an object file
 src/cores/arduino/abi.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/abi.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/abi.cpp.obj
 .PHONY : src/cores/arduino/abi.cpp.obj
 
 src/cores/arduino/abi.i: src/cores/arduino/abi.cpp.i
@@ -547,7 +547,7 @@ src/cores/arduino/abi.i: src/cores/arduino/abi.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/abi.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/abi.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/abi.cpp.i
 .PHONY : src/cores/arduino/abi.cpp.i
 
 src/cores/arduino/abi.s: src/cores/arduino/abi.cpp.s
@@ -555,15 +555,39 @@ src/cores/arduino/abi.s: src/cores/arduino/abi.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/abi.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/abi.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/abi.cpp.s
 .PHONY : src/cores/arduino/abi.cpp.s
+
+src/cores/arduino/hooks.obj: src/cores/arduino/hooks.c.obj
+.PHONY : src/cores/arduino/hooks.obj
+
+# target to build an object file
+src/cores/arduino/hooks.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/hooks.c.obj
+.PHONY : src/cores/arduino/hooks.c.obj
+
+src/cores/arduino/hooks.i: src/cores/arduino/hooks.c.i
+.PHONY : src/cores/arduino/hooks.i
+
+# target to preprocess a source file
+src/cores/arduino/hooks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/hooks.c.i
+.PHONY : src/cores/arduino/hooks.c.i
+
+src/cores/arduino/hooks.s: src/cores/arduino/hooks.c.s
+.PHONY : src/cores/arduino/hooks.s
+
+# target to generate assembly for a file
+src/cores/arduino/hooks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/hooks.c.s
+.PHONY : src/cores/arduino/hooks.c.s
 
 src/cores/arduino/main.obj: src/cores/arduino/main.cpp.obj
 .PHONY : src/cores/arduino/main.obj
 
 # target to build an object file
 src/cores/arduino/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/main.cpp.obj
 .PHONY : src/cores/arduino/main.cpp.obj
 
 src/cores/arduino/main.i: src/cores/arduino/main.cpp.i
@@ -571,7 +595,7 @@ src/cores/arduino/main.i: src/cores/arduino/main.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/main.cpp.i
 .PHONY : src/cores/arduino/main.cpp.i
 
 src/cores/arduino/main.s: src/cores/arduino/main.cpp.s
@@ -579,7 +603,7 @@ src/cores/arduino/main.s: src/cores/arduino/main.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/main.cpp.s
 .PHONY : src/cores/arduino/main.cpp.s
 
 src/cores/arduino/new.obj: src/cores/arduino/new.cpp.obj
@@ -587,7 +611,7 @@ src/cores/arduino/new.obj: src/cores/arduino/new.cpp.obj
 
 # target to build an object file
 src/cores/arduino/new.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/new.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/new.cpp.obj
 .PHONY : src/cores/arduino/new.cpp.obj
 
 src/cores/arduino/new.i: src/cores/arduino/new.cpp.i
@@ -595,7 +619,7 @@ src/cores/arduino/new.i: src/cores/arduino/new.cpp.i
 
 # target to preprocess a source file
 src/cores/arduino/new.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/new.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/new.cpp.i
 .PHONY : src/cores/arduino/new.cpp.i
 
 src/cores/arduino/new.s: src/cores/arduino/new.cpp.s
@@ -603,7 +627,7 @@ src/cores/arduino/new.s: src/cores/arduino/new.cpp.s
 
 # target to generate assembly for a file
 src/cores/arduino/new.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/new.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/new.cpp.s
 .PHONY : src/cores/arduino/new.cpp.s
 
 src/cores/arduino/wiring.obj: src/cores/arduino/wiring.c.obj
@@ -611,7 +635,7 @@ src/cores/arduino/wiring.obj: src/cores/arduino/wiring.c.obj
 
 # target to build an object file
 src/cores/arduino/wiring.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring.c.obj
 .PHONY : src/cores/arduino/wiring.c.obj
 
 src/cores/arduino/wiring.i: src/cores/arduino/wiring.c.i
@@ -619,7 +643,7 @@ src/cores/arduino/wiring.i: src/cores/arduino/wiring.c.i
 
 # target to preprocess a source file
 src/cores/arduino/wiring.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring.c.i
 .PHONY : src/cores/arduino/wiring.c.i
 
 src/cores/arduino/wiring.s: src/cores/arduino/wiring.c.s
@@ -627,7 +651,7 @@ src/cores/arduino/wiring.s: src/cores/arduino/wiring.c.s
 
 # target to generate assembly for a file
 src/cores/arduino/wiring.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring.c.s
 .PHONY : src/cores/arduino/wiring.c.s
 
 src/cores/arduino/wiring_analog.obj: src/cores/arduino/wiring_analog.c.obj
@@ -635,7 +659,7 @@ src/cores/arduino/wiring_analog.obj: src/cores/arduino/wiring_analog.c.obj
 
 # target to build an object file
 src/cores/arduino/wiring_analog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_analog.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_analog.c.obj
 .PHONY : src/cores/arduino/wiring_analog.c.obj
 
 src/cores/arduino/wiring_analog.i: src/cores/arduino/wiring_analog.c.i
@@ -643,7 +667,7 @@ src/cores/arduino/wiring_analog.i: src/cores/arduino/wiring_analog.c.i
 
 # target to preprocess a source file
 src/cores/arduino/wiring_analog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_analog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_analog.c.i
 .PHONY : src/cores/arduino/wiring_analog.c.i
 
 src/cores/arduino/wiring_analog.s: src/cores/arduino/wiring_analog.c.s
@@ -651,7 +675,7 @@ src/cores/arduino/wiring_analog.s: src/cores/arduino/wiring_analog.c.s
 
 # target to generate assembly for a file
 src/cores/arduino/wiring_analog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_analog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_analog.c.s
 .PHONY : src/cores/arduino/wiring_analog.c.s
 
 src/cores/arduino/wiring_digital.obj: src/cores/arduino/wiring_digital.c.obj
@@ -659,7 +683,7 @@ src/cores/arduino/wiring_digital.obj: src/cores/arduino/wiring_digital.c.obj
 
 # target to build an object file
 src/cores/arduino/wiring_digital.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_digital.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_digital.c.obj
 .PHONY : src/cores/arduino/wiring_digital.c.obj
 
 src/cores/arduino/wiring_digital.i: src/cores/arduino/wiring_digital.c.i
@@ -667,7 +691,7 @@ src/cores/arduino/wiring_digital.i: src/cores/arduino/wiring_digital.c.i
 
 # target to preprocess a source file
 src/cores/arduino/wiring_digital.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_digital.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_digital.c.i
 .PHONY : src/cores/arduino/wiring_digital.c.i
 
 src/cores/arduino/wiring_digital.s: src/cores/arduino/wiring_digital.c.s
@@ -675,7 +699,7 @@ src/cores/arduino/wiring_digital.s: src/cores/arduino/wiring_digital.c.s
 
 # target to generate assembly for a file
 src/cores/arduino/wiring_digital.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_digital.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_digital.c.s
 .PHONY : src/cores/arduino/wiring_digital.c.s
 
 src/cores/arduino/wiring_pulse.obj: src/cores/arduino/wiring_pulse.c.obj
@@ -683,7 +707,7 @@ src/cores/arduino/wiring_pulse.obj: src/cores/arduino/wiring_pulse.c.obj
 
 # target to build an object file
 src/cores/arduino/wiring_pulse.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_pulse.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_pulse.c.obj
 .PHONY : src/cores/arduino/wiring_pulse.c.obj
 
 src/cores/arduino/wiring_pulse.i: src/cores/arduino/wiring_pulse.c.i
@@ -691,7 +715,7 @@ src/cores/arduino/wiring_pulse.i: src/cores/arduino/wiring_pulse.c.i
 
 # target to preprocess a source file
 src/cores/arduino/wiring_pulse.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_pulse.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_pulse.c.i
 .PHONY : src/cores/arduino/wiring_pulse.c.i
 
 src/cores/arduino/wiring_pulse.s: src/cores/arduino/wiring_pulse.c.s
@@ -699,7 +723,7 @@ src/cores/arduino/wiring_pulse.s: src/cores/arduino/wiring_pulse.c.s
 
 # target to generate assembly for a file
 src/cores/arduino/wiring_pulse.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_pulse.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_pulse.c.s
 .PHONY : src/cores/arduino/wiring_pulse.c.s
 
 src/cores/arduino/wiring_shift.obj: src/cores/arduino/wiring_shift.c.obj
@@ -707,7 +731,7 @@ src/cores/arduino/wiring_shift.obj: src/cores/arduino/wiring_shift.c.obj
 
 # target to build an object file
 src/cores/arduino/wiring_shift.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_shift.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_shift.c.obj
 .PHONY : src/cores/arduino/wiring_shift.c.obj
 
 src/cores/arduino/wiring_shift.i: src/cores/arduino/wiring_shift.c.i
@@ -715,7 +739,7 @@ src/cores/arduino/wiring_shift.i: src/cores/arduino/wiring_shift.c.i
 
 # target to preprocess a source file
 src/cores/arduino/wiring_shift.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_shift.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_shift.c.i
 .PHONY : src/cores/arduino/wiring_shift.c.i
 
 src/cores/arduino/wiring_shift.s: src/cores/arduino/wiring_shift.c.s
@@ -723,7 +747,7 @@ src/cores/arduino/wiring_shift.s: src/cores/arduino/wiring_shift.c.s
 
 # target to generate assembly for a file
 src/cores/arduino/wiring_shift.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/arduinocore.dir/build.make CMakeFiles/arduinocore.dir/src/cores/arduino/wiring_shift.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ArduinoCore.dir/build.make CMakeFiles/ArduinoCore.dir/src/cores/arduino/wiring_shift.c.s
 .PHONY : src/cores/arduino/wiring_shift.c.s
 
 # Help Target
@@ -738,7 +762,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... arduinocore"
+	@echo "... ArduinoCore"
 	@echo "... src/cores/arduino/CDC.obj"
 	@echo "... src/cores/arduino/CDC.i"
 	@echo "... src/cores/arduino/CDC.s"
@@ -787,6 +811,9 @@ help:
 	@echo "... src/cores/arduino/abi.obj"
 	@echo "... src/cores/arduino/abi.i"
 	@echo "... src/cores/arduino/abi.s"
+	@echo "... src/cores/arduino/hooks.obj"
+	@echo "... src/cores/arduino/hooks.i"
+	@echo "... src/cores/arduino/hooks.s"
 	@echo "... src/cores/arduino/main.obj"
 	@echo "... src/cores/arduino/main.i"
 	@echo "... src/cores/arduino/main.s"

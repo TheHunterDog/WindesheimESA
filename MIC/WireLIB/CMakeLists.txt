@@ -13,10 +13,10 @@ endif()
 set(CMAKE_TOOLCHAIN_FILE ${ARDUINO_PATH}/etc/toolchain-avr.cmake)
 
 # Project name
-project("TWI")
+project("Wire")
 
 # The deliverable
-set(PRODUCT_NAME TWI)
+set(PRODUCT_NAME Wire)
 
 # Where to install
 if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Linux")
@@ -29,21 +29,19 @@ elseif(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Darwin")
 endif()
 
 
+
+
+
+
 # Target: the Arduino core library with all core source files to compile
 # To get a list of .c and cpp files in Linux:
 #       cd <project directory>
 #       find src/cores/arduino -name \*.c\*
 # NOTE: Omit hooks.c
 add_library(${PRODUCT_NAME} STATIC
-    src/twi.c
-)
+  src/Wire.cpp
+  src/utility/twi.c
 
-
-target_include_directories(${PRODUCT_NAME}
-    PRIVATE "${ARDUINO_PATH}/include/arduino"
-)
-target_link_directories(${PRODUCT_NAME}
-    PRIVATE "${ARDUINO_PATH}/lib"
 )
 
 # Here the compiler finds include files (-I flags)
@@ -58,8 +56,20 @@ target_include_directories(${PRODUCT_NAME} PRIVATE
 # Also include the pins_arduino.h file
 #       src/variants/standard/pins_arduino.h
 set(INCLUDES
-    src/twi.h
+  src/Wire.h
+  src/utility/twi.h
 )
+
+target_include_directories(${PRODUCT_NAME}
+    PRIVATE "${ARDUINO_PATH}/include/arduino"
+)
+target_link_directories(${PRODUCT_NAME}
+    PRIVATE "${ARDUINO_PATH}/lib"
+)
+target_link_libraries(${PRODUCT_NAME}
+  ArduinoCore
+)
+
 
 # Install the library here (INSTALL_PREFIX_PATH is prepended)
 install(TARGETS ${PRODUCT_NAME} ARCHIVE DESTINATION lib)

@@ -11,12 +11,13 @@ elseif(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Darwin")
 
 endif()
 set(CMAKE_TOOLCHAIN_FILE ${ARDUINO_PATH}/etc/toolchain-avr.cmake)
-
+# we need the assembler this time
+enable_language(ASM)
 # Project name
 project("ArduinoCore")
 
 # The deliverable
-set(PRODUCT_NAME arduinocore)
+set(PRODUCT_NAME ArduinoCore)
 
 # Where to install
 if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Linux")
@@ -41,7 +42,7 @@ add_library(${PRODUCT_NAME} STATIC
     src/cores/arduino/HardwareSerial2.cpp
     src/cores/arduino/HardwareSerial3.cpp
     src/cores/arduino/HardwareSerial.cpp
-    #src/cores/arduino/hooks.c
+    src/cores/arduino/hooks.c
     src/cores/arduino/IPAddress.cpp
     src/cores/arduino/main.cpp
     src/cores/arduino/new.cpp

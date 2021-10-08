@@ -11,7 +11,8 @@
       "*.info": "plaintext",
       "*.install": "php",
       "*.test": "php",
-      "arduino.h": "c"
+      "arduino.h": "c",
+      "twi.h": "c"
     }
   }
 }

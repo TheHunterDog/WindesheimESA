@@ -4,4 +4,4 @@
 /Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/install/strip.dir
 /Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/install.dir
 /Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/list_install_components.dir
-/Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/arduinocore.dir
+/Users/markheijnekamp/Windesheim/MIC/ArduinoCoreLib/build/CMakeFiles/ArduinoCore.dir
