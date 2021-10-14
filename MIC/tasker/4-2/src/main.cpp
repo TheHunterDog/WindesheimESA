@@ -12,28 +12,30 @@
 #define BUAD 9600
 
   ISR(INT0_vect){
-     PORTB ^= (1<<PORTB5); 
+    Serial.println('x');
+    Serial.flush(); 
   }
 
 int main()
 {
-  // input
+  Serial.begin(BUAD);
+  DDRB |= (1 << DDB5);
+  DDRD |= (1 << DDD2);
+
   DDRD &= ~(1 << DDD3);
   PORTD |= (1 << PORTD3);
 
-  // leds
-  DDRB |= (1 << DDB4);
-  DDRB |= (1 << DDB5);
-
   EIMSK |= (1<<INT0);
+  // EIMSK |= (1<<INT1);
   EICRA |= (1<<ISC01);
 
   sei();
 
+  PORTD |= (1<<PORTD2);
   while (1)
   {
-      PORTB ^= (1<<PORTB5); 
-
+    PORTB ^= (1<<PORTB5); 
+    _delay_ms(2000);
   }
   
 }
