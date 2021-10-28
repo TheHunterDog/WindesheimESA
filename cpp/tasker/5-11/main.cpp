@@ -19,7 +19,7 @@ void copy_vec(vec &d, vec *s){
   d.x = s->x;
   d.y = s->y;
 }
-
+a value of type "int (*)[2]" cannot be used to initialize an entity of type "int (*)[5]"C/C++(144)
 int main(int argc, char const *argv[])
 {
   vec sum = {0,0};
